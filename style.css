@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   background: var(--bg);
   color: var(--text);
@@ -26,10 +26,11 @@ header {
   border-radius: 50%;
   border: 5px solid #fff;
   margin-bottom: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .profile-pic:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 119, 255, 0.6);
 }
 
 nav a {
@@ -135,6 +136,22 @@ footer button:hover {
 /* Dark mode */
 body.dark {
   --bg: #121212;
-  --text: #f4f4f4;
+  --text: #eaeaea;
   --card-bg: #1e1e1e;
+}
+
+body.dark h1, 
+body.dark h2, 
+body.dark h3 {
+  color: #ffffff;
+}
+
+body.dark p, 
+body.dark li, 
+body.dark a {
+  color: #d0d0d0;
+}
+
+body.dark nav a {
+  color: #eaeaea;
 }

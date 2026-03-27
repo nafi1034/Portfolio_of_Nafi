@@ -4,62 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Md. Adib Reza Nafi | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">NAFI<span class="accent">.</span></div>
+      <div class="logo">ADIB<span class="accent">.</span></div>
       <div class="nav-right">
-        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
         <a href="#education">Education</a>
-        <button id="darkModeToggle" class="theme-switch" aria-label="Toggle Dark Mode">🌓</button>
+        <button id="darkModeToggle" class="theme-btn">🌓</button>
       </div>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="hero-content">
-      <img src="Images/profile.jpg" alt="Md. Adib Reza Nafi" class="profile-img">
+  <div class="container">
+    <header class="hero">
+      <div class="profile-wrapper">
+        <img src="Images/profile.jpg" alt="Md. Adib Reza Nafi" class="profile-img">
+      </div>
       <h1>Hi, I'm <span class="accent">Adib Reza Nafi</span></h1>
-      <p class="subtitle">Civil Engineering Student & Technical Strategist</p>
-      <div class="badge-container">
-        <span class="badge">AutoCAD</span>
-        <span class="badge">Linux Systems</span>
-        <span class="badge">Content Strategy</span>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <section id="about" class="section">
-      <h2>The Blueprint</h2>
-      <div class="card">
-        <p>I am a first-year Bachelor of Science in Civil Engineering student at <strong>Hajee Mohammad Danesh Science and Technology University</strong>. I specialize in the intersection of structural precision and digital efficiency, applying Bangladesh National Building Code (BNBC) standards to modern technical workflows.</p>
-      </div>
-    </section>
+      <p>Civil Engineering Student & Technical Strategist</p>
+    </header>
 
     <section id="education" class="section">
       <h2>Academic Journey</h2>
       <div class="timeline">
         <div class="timeline-item">
-          <div class="time-meta">2025 — Present</div>
-          <div class="time-body">
+          <div class="date">2025 — Present</div>
+          <div class="content">
             <h3>Bachelor of Science in Civil Engineering</h3>
             <p>Hajee Mohammad Danesh Science and Technology University</p>
           </div>
         </div>
         <div class="timeline-item">
-          <div class="time-meta">Class of 2024</div>
-          <div class="time-body">
+          <div class="date">Class of 2024</div>
+          <div class="content">
             <h3>Higher Secondary Certificate</h3>
             <p>Notre Dame College, Dhaka</p>
           </div>
         </div>
         <div class="timeline-item">
-          <div class="time-meta">Class of 2022</div>
-          <div class="time-body">
+          <div class="date">Class of 2022</div>
+          <div class="content">
             <h3>Secondary School Certificate</h3>
             <p>Rajshahi Collegiate School</p>
           </div>
@@ -67,7 +55,7 @@
       </div>
     </section>
 
-    <section id="projects" class="projects section">
+    <section id="projects" class="projects">
       <h2>Featured Projects</h2>
       <div class="project-list">
         <div class="project-card">
@@ -75,24 +63,33 @@
           <p>Creative content engineering and lyrical shorts production.</p>
         </div>
         <div class="project-card">
-          <h3>Structural Design</h3>
-          <p>Analysis of truss systems and BNBC 2020 code compliance.</p>
+          <h3>Structural Analysis</h3>
+          <p>Truss modeling and BNBC 2020 protocol application via AutoCAD.</p>
         </div>
         <div class="project-card">
-          <h3>System Optimization</h3>
-          <p>Configuring high-performance Linux environments for engineering tools.</p>
+          <h3>System Architect</h3>
+          <p>Optimizing Linux Mint environments for engineering software.</p>
         </div>
       </div>
     </section>
 
-    <section class="contact section">
-      <div class="contact-box">
-        <h2>Get In Touch</h2>
-        <p>Interested in collaborating on engineering or technical projects?</p>
-        <a href="mailto:adibrezanafi@gmail.com" class="email-btn">Email Me</a>
+    <section class="skills">
+      <h2>Technical Toolkit</h2>
+      <div class="skill-list">
+        <span class="skill-tag">AutoCAD</span>
+        <span class="skill-tag">BNBC Standards</span>
+        <span class="skill-tag">Linux (Mint/Kali)</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Content Strategy</span>
       </div>
     </section>
-  </main>
+
+    <section class="contact">
+      <h2>Get In Touch</h2>
+      <p>Building the future, one blueprint at a time.</p>
+      <a href="mailto:adibrezanafi@gmail.com" class="contact-btn">Email Me</a>
+    </section>
+  </div>
 
   <script src="script.js"></script>
 </body>

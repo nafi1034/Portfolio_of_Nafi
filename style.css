@@ -130,6 +130,75 @@ section.visible {
   font-weight: bold;
 }
 
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  margin-top: 20px;
+}
+
+/* Vertical line behind items */
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.edu-item {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  padding-left: 45px;
+}
+
+/* Bullet points for the line */
+.edu-item::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.edu-year {
+  min-width: 120px;
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.9rem;
+  padding-top: 4px;
+}
+
+.edu-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.edu-content p {
+  margin: 5px 0;
+  opacity: 0.8;
+}
+
+.edu-tag {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 6px;
+  color: var(--accent);
+}
+
 footer {
   text-align: center;
   padding: 40px;

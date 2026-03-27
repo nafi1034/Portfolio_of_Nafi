@@ -1,24 +1,35 @@
-// Toggle Theme Logic
-const toggleBtn = document.getElementById('toggle-theme');
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('light');
-  const isLight = document.body.classList.contains('light');
-  toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch Vision Mode';
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Check for saved preference
+if (localStorage.getItem('theme') === 'light') {
+  body.classList.add('light');
+}
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('light');
+  
+  // Save preference
+  if (body.classList.contains('light')) {
+    localStorage.setItem('theme', 'light');
+  } else {
+    localStorage.setItem('theme', 'dark');
+  }
 });
 
-// Intersection Observer for Section Reveal
-const revealOptions = {
-  threshold: 0.15
-};
-
+// Simple Scroll Reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateY(0)';
     }
   });
-}, revealOptions);
+}, { threshold: 0.1 });
 
 document.querySelectorAll('section').forEach(section => {
+  section.style.opacity = 0;
+  section.style.transform = 'translateY(20px)';
+  section.style.transition = 'all 0.6s ease-out';
   observer.observe(section);
 });

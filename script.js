@@ -1,18 +1,24 @@
-// Dark mode toggle
-document.getElementById('toggle-theme').addEventListener('click', () => {
-  document.body.classList.toggle('dark');
+// Toggle Theme Logic
+const toggleBtn = document.getElementById('toggle-theme');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+  const isLight = document.body.classList.contains('light');
+  toggleBtn.textContent = isLight ? 'Switch to Dark Mode' : 'Switch Vision Mode';
 });
 
-// Reveal sections on scroll
-const sections = document.querySelectorAll('section');
-const revealOnScroll = () => {
-  const triggerBottom = window.innerHeight * 0.85;
-  sections.forEach(section => {
-    const boxTop = section.getBoundingClientRect().top;
-    if (boxTop < triggerBottom) {
-      section.classList.add('visible');
+// Intersection Observer for Section Reveal
+const revealOptions = {
+  threshold: 0.15
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
     }
   });
-};
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+}, revealOptions);
+
+document.querySelectorAll('section').forEach(section => {
+  observer.observe(section);
+});

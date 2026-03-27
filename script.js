@@ -1,33 +1,34 @@
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Persistence
-if (localStorage.getItem('theme-mode') === 'light') {
-    body.classList.add('light');
+// Check for saved preference
+if (localStorage.getItem('portfolio-theme') === 'dark') {
+    body.classList.add('dark-mode');
 }
 
 themeToggle.addEventListener('click', () => {
-    body.classList.toggle('light');
-    localStorage.setItem('theme-mode', body.classList.contains('light') ? 'light' : 'dark');
+    body.classList.toggle('dark-mode');
+    
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('portfolio-theme', 'dark');
+    } else {
+        localStorage.setItem('portfolio-theme', 'light');
+    }
 });
 
-// Scroll Reveal Logic
-const reveal = () => {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(s => {
-        const top = s.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) {
-            s.style.opacity = "1";
-            s.style.transform = "translateY(0)";
+// Simple Scroll Animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
         }
     });
-};
+}, { threshold: 0.1 });
 
-document.querySelectorAll('section').forEach(s => {
-    s.style.opacity = "0";
-    s.style.transform = "translateY(40px)";
-    s.style.transition = "all 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67)";
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(20px)";
+    section.style.transition = "all 0.6s ease-out";
+    observer.observe(section);
 });
-
-window.addEventListener('scroll', reveal);
-window.addEventListener('load', reveal);

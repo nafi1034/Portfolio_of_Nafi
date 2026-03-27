@@ -4,74 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Md. Adib Reza Nafi | Portfolio</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="selection:bg-blue-500">
   <header>
     <div class="hero">
       <img src="Images/profile.jpg" alt="Md. Adib Reza Nafi" class="profile-pic">
-      <h1>Md. Adib Reza Nafi</h1>
-      <p>Civil Engineering Student | Technical Troubleshooter | Content Creator</p>
+      <h1>Md. Adib <span class="accent-text">Reza Nafi</span></h1>
+      <p class="subtitle">Civil Engineering @ HSTU | Technical Systems | Content Strategy</p>
       <nav>
-        <a href="#about">About</a>
+        <a href="#about">The Blueprint</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="#skills">Toolkit</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a first-year BSc Civil Engineering student at HSTU. Alongside my studies, I specialize in Android troubleshooting, Linux workflows, and civil engineering software like AutoCAD. I’m also building a creative brand through graphical lyrical videos, mini vlogs, and social media engineering.</p>
+    <h2>The Blueprint</h2>
+    <p>I am a first-year BSc Civil Engineering student at HSTU. I specialize in bridging the gap between physical structures and digital systems—ranging from <strong>AutoCAD and BNBC 2020 protocols</strong> to <strong>Linux terminal workflows</strong> and Android troubleshooting. Beyond engineering, I manage creative content pipelines for graphical lyrical shorts and social media branding.</p>
   </section>
 
   <section id="projects">
-    <h2>Projects</h2>
+    <h2>Featured Projects</h2>
     <div class="grid">
       <div class="card">
-        <img src="Images/lyrical-video.jpg" alt="Graphical Lyrical Video">
-        <h3>Graphical Lyrical Videos</h3>
-        <p>Animated overlays synced with trending songs for Shorts/Reels.</p>
+        <div class="image-container">
+           <img src="Images/lyrical-video.jpg" alt="Graphical Lyrical Video">
+        </div>
+        <div class="card-content">
+          <h3>Static Soul & Lyrical Media</h3>
+          <p>Streamlined production of animated overlays and lyrical content for high-engagement Shorts and Reels.</p>
+        </div>
       </div>
       <div class="card">
-        <img src="Images/python-course.jpg" alt="Python Hackathon Prep">
-        <h3>Python Hackathon Prep</h3>
-        <p>Progress tracking in a 521-step Python course for NASA Space Apps Challenge 2025.</p>
+        <div class="image-container">
+          <img src="Images/python-course.jpg" alt="Python Hackathon Prep">
+        </div>
+        <div class="card-content">
+          <h3>Computational Logic</h3>
+          <p>Systematic progression through Python fundamentals for the NASA Space Apps Challenge 2025.</p>
+        </div>
       </div>
       <div class="card">
-        <img src="Images/autocad.jpg" alt="AutoCAD & BNBC">
-        <h3>AutoCAD & BNBC Analysis</h3>
-        <p>Applied BNBC 2020 protocols in structural design exercises and truss problems.</p>
+        <div class="image-container">
+          <img src="Images/autocad.jpg" alt="AutoCAD & BNBC">
+        </div>
+        <div class="card-content">
+          <h3>Structural Design Analysis</h3>
+          <p>Application of BNBC 2020 protocols for structural exercises, focusing on truss problems and precision modeling.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
+    <h2>Toolkit</h2>
     <ul class="skills-list">
-      <li>Android troubleshooting & scripting</li>
-      <li>Linux terminal workflows</li>
-      <li>AutoCAD & BNBC code application</li>
-      <li>Creative translation (Bengali, English, Arabic)</li>
-      <li>Graphical lyrical video & mini vlog production</li>
-      <li>Social media engineering & content strategy</li>
+      <li>AutoCAD & BNBC Standards </li>
+      <li>Linux System Optimization </li>
+      <li>Android Scripting & Debugging </li>
+      <li>Content Workflow Engineering </li>
+      <li>Technical Translation </li>
+      <li>Digital Branding Strategy </li>
     </ul>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:adibrezanafi@gmail.com">adibrezanafi@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/nafi1034">github.com/nafi1034</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/adibrnafi/">linkedin.com/in/adibrnafi</a></p>
-    <p><a href="resume.pdf" class="resume-btn">Download Resume</a></p>
+    <h2>Let's Connect</h2>
+    <div class="contact-links">
+      <p>Email: <a href="mailto:adibrezanafi@gmail.com">adibrezanafi@gmail.com</a> </p>
+      <p>GitHub: <a href="https://github.com/nafi1034" target="_blank">github.com/nafi1034</a> </p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/adibrnafi/" target="_blank">linkedin.com/in/adibrnafi</a> </p>
+      <a href="resume.pdf" class="resume-btn">Download Resume</a> 
+    </div>
   </section>
 
   <footer>
-    <p>© 2026 Md. Adib Reza Nafi</p>
-    <button id="toggle-theme">Toggle Dark Mode</button>
+    <p>© 2026 Md. Adib Reza Nafi </p>
+    <button id="toggle-theme">Switch Vision Mode</button>
   </footer>
 
   <script src="script.js"></script>

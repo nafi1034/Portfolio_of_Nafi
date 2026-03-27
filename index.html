@@ -4,80 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Md. Adib Reza Nafi | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <span class="logo">NAFI<span class="dot">.</span></span>
-      <div class="nav-right">
+  <nav class="glass-nav">
+    <div class="nav-content">
+      <div class="logo">NAFI<span class="pulse">_</span></div>
+      <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <button id="theme-toggle" class="theme-btn">
-            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></svg>
+        <a href="#education">Timeline</a>
+        <a href="#projects">Work</a>
+        <button id="theme-toggle" class="mode-switch">
+          <span class="icon">🌓</span>
         </button>
       </div>
     </div>
   </nav>
 
-  <header class="hero">
-    <img src="Images/profile.jpg" alt="Md. Adib Reza Nafi" class="profile-pic">
-    <h1>Md. Adib <span class="highlight">Reza Nafi</span></h1>
-    <p class="tagline">Civil Engineering Student • Technical Strategist • Content Creator</p>
+  <header class="hero-section">
+    <div class="hero-blur"></div>
+    <img src="Images/profile.jpg" alt="Md. Adib Reza Nafi" class="profile-frame">
+    <h1 class="glitch-text" data-text="Md. Adib Reza Nafi">Md. Adib Reza Nafi</h1>
+    <p class="hero-sub">BSc in Civil Engineering @ HSTU • System Architect • Content Strategist</p>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>The Blueprint</h2>
-      <p>I am a first-year BSc Civil Engineering student at HSTU. My work merges structural engineering principles with modern digital workflows, from AutoCAD designs to Linux system optimization and creative media production.</p>
+  <main class="container">
+    <section id="about" class="glass-card">
+      <h2 class="section-title">The Vision</h2>
+      <p>I am a Civil Engineering student at <strong>Hajee Mohammad Danesh Science and Technology University</strong>. I specialize in the intersection of physical infrastructure and digital optimization—leveraging AutoCAD for structural precision and Linux environments for high-performance technical workflows.</p>
     </section>
 
     <section id="education">
-      <h2>Academic Timeline</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="time-marker">2025 — Present</div>
-          <div class="time-content">
-            <h3>BSc in Civil Engineering</h3>
-            <p>Hajee Mohammad Danesh Science and Technology University (HSTU) </p>
+      <h2 class="section-title">Academic Journey</h2>
+      <div class="neo-timeline">
+        <div class="node">
+          <div class="node-meta">2025 — Present</div>
+          <div class="node-info">
+            <h3>Bachelor of Science in Civil Engineering</h3>
+            <p>Hajee Mohammad Danesh Science and Technology University</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="time-marker">Class of 2024</div>
-          <div class="time-content">
-            <h3>Higher Secondary Certificate (HSC)</h3>
-            <p>Notre Dame College, Dhaka (NDC) </p>
+        <div class="node">
+          <div class="node-meta">Class of 2024</div>
+          <div class="node-info">
+            <h3>Higher Secondary Certificate</h3>
+            <p>Notre Dame College, Dhaka</p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="time-marker">Class of 2022</div>
-          <div class="time-content">
-            <h3>Secondary School Certificate (SSC)</h3>
-            <p>Rajshahi Collegiate School (RCS) </p>
+        <div class="node">
+          <div class="node-meta">Class of 2022</div>
+          <div class="node-info">
+            <h3>Secondary School Certificate</h3>
+            <p>Rajshahi Collegiate School</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h2>Featured Work</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>Static Soul Media</h3>
-          <p>Graphical lyrical shorts and content strategy.</p>
-        </div>
-        <div class="project-card">
-          <h3>Structural Analysis</h3>
-          <p>Applied AutoCAD and BNBC protocols in design.</p>
-        </div>
+    <section id="projects" class="grid-layout">
+      <div class="project-box">
+        <div class="box-tag">Engineering</div>
+        <h3>Structural Systems</h3>
+        <p>Implementation of BNBC 2020 codes and AutoCAD truss analysis.</p>
+      </div>
+      <div class="project-box">
+        <div class="box-tag">Media</div>
+        <h3>Static Soul</h3>
+        <p>Advanced lyrical content production and digital brand engineering.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Md. Adib Reza Nafi • Built for the Future</p>
+    <p>Handcrafted by Md. Adib Reza Nafi &copy; 2026</p>
   </footer>
 
   <script src="script.js"></script>

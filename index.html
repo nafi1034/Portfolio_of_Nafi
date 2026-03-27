@@ -1,45 +1,98 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adib Reza Portfolio</title>
+  <title>Md. Adib Reza Nafi | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <button id="darkModeToggle">Dark Mode</button>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">NAFI<span class="accent">.</span></div>
+      <div class="nav-right">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <button id="darkModeToggle" class="theme-switch">🌓</button>
+      </div>
+    </div>
+  </nav>
 
-    <header class="hero">
-      <h1>Hi, I'm Adib Reza</h1>
-      <p>Civil Engineering Student & Aspiring Developer</p>
-    </header>
+  <header class="hero">
+    <div class="hero-content">
+      <img src="Images/profile.jpg" alt="Md. Adib Reza Nafi" class="profile-img">
+      <h1>Hi, I'm <span class="accent">Adib Reza Nafi</span></h1>
+      <p class="subtitle">Civil Engineering Student & Technical Strategist</p>
+      <div class="badge-container">
+        <span class="badge">AutoCAD</span>
+        <span class="badge">Linux Systems</span>
+        <span class="badge">Content Strategy</span>
+      </div>
+    </div>
+  </header>
 
-    <section class="projects">
-      <h2>Projects</h2>
+  <main class="container">
+    <section id="about" class="section">
+      <h2>The Blueprint</h2>
+      <div class="card">
+        <p>I am a first-year Bachelor of Science in Civil Engineering student at <strong>Hajee Mohammad Danesh Science and Technology University</strong>. I focus on the intersection of structural precision and digital efficiency, applying Bangladesh National Building Code (BNBC) standards to modern technical workflows.</p>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Academic Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="time-meta">2025 — Present</div>
+          <div class="time-body">
+            <h3>Bachelor of Science in Civil Engineering</h3>
+            <p>Hajee Mohammad Danesh Science and Technology University</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="time-meta">Class of 2024</div>
+          <div class="time-body">
+            <h3>Higher Secondary Certificate</h3>
+            <p>Notre Dame College, Dhaka</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="time-meta">Class of 2022</div>
+          <div class="time-body">
+            <h3>Secondary School Certificate</h3>
+            <p>Rajshahi Collegiate School</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects section">
+      <h2>Featured Projects</h2>
       <div class="project-list">
-        <div class="project-card">Project 1<br><span>Short description</span></div>
-        <div class="project-card">Project 2<br><span>Short description</span></div>
-        <div class="project-card">Project 3<br><span>Short description</span></div>
+        <div class="project-card">
+          <h3>Static Soul Media</h3>
+          <span>Creative content engineering and lyrical shorts production.</span>
+        </div>
+        <div class="project-card">
+          <h3>Structural Design</h3>
+          <span>Analysis of truss systems and BNBC 2020 code compliance.</span>
+        </div>
+        <div class="project-card">
+          <h3>System Optimization</h3>
+          <span>Configuring high-performance Linux environments for engineering tools.</span>
+        </div>
       </div>
     </section>
 
-    <section class="skills">
-      <h2>Skills</h2>
-      <div class="skill-list">
-        <span>AutoCAD</span>
-        <span>Civil Design</span>
-        <span>JavaScript</span>
-        <span>React</span>
+    <section class="contact section">
+      <div class="contact-box">
+        <h2>Get In Touch</h2>
+        <p>Interested in collaborating on engineering or technical projects?</p>
+        <a href="mailto:adibrezanafi@gmail.com" class="email-btn">Email Me</a>
       </div>
     </section>
-
-    <section class="contact">
-      <h2>Get In Touch</h2>
-      <button>Email Me</button>
-    </section>
-  </div>
+  </main>
 
   <script src="script.js"></script>
 </body>

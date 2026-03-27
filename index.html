@@ -1,102 +1,46 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Adib Reza Nafi | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adib Reza Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-flex">
-            <div class="logo">NAFI<span class="accent">.</span></div>
-            <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-                <button id="theme-toggle" class="theme-switch" title="Toggle Light/Dark Mode">
-                    <span class="mode-icon">🌓</span>
-                </button>
-            </div>
-        </div>
-    </nav>
+  <div class="container">
+    <button id="darkModeToggle">Dark Mode</button>
 
     <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <img src="Images/profile.jpg" alt="Md. Adib Reza Nafi" class="profile-img">
-                <h1>Md. Adib <span class="accent">Reza Nafi</span></h1>
-                <p class="subtitle">Civil Engineering Student at Hajee Mohammad Danesh Science and Technology University</p>
-                <div class="social-pills">
-                    <span class="pill">Technical Strategist</span>
-                    <span class="pill">Content Creator</span>
-                    <span class="pill">Linux Enthusiast</span>
-                </div>
-            </div>
-        </div>
+      <h1>Hi, I'm Adib Reza</h1>
+      <p>Civil Engineering Student & Aspiring Developer</p>
     </header>
 
-    <main class="container">
-        <section id="about" class="section">
-            <h2 class="section-title">Professional Blueprint</h2>
-            <div class="card about-card">
-                <p>I am a dedicated Civil Engineering student specializing in the synergy between traditional structural analysis and modern digital systems. From applying <strong>Bangladesh National Building Code (BNBC)</strong> standards in AutoCAD to optimizing <strong>Linux kernel workflows</strong>, I build solutions that are both physically sound and technically efficient.</p>
-            </div>
-        </section>
+    <section class="projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project-card">Project 1<br><span>Short description</span></div>
+        <div class="project-card">Project 2<br><span>Short description</span></div>
+        <div class="project-card">Project 3<br><span>Short description</span></div>
+      </div>
+    </section>
 
-        <section id="education" class="section">
-            <h2 class="section-title">Academic Timeline</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2025 — Present</div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Science in Civil Engineering</h3>
-                        <p>Hajee Mohammad Danesh Science and Technology University</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Class of 2024</div>
-                    <div class="timeline-content">
-                        <h3>Higher Secondary Certificate</h3>
-                        <p>Notre Dame College, Dhaka</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Class of 2022</div>
-                    <div class="timeline-content">
-                        <h3>Secondary School Certificate</h3>
-                        <p>Rajshahi Collegiate School</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="skill-list">
+        <span>AutoCAD</span>
+        <span>Civil Design</span>
+        <span>JavaScript</span>
+        <span>React</span>
+      </div>
+    </section>
 
-        <section id="projects" class="section">
-            <h2 class="section-title">Featured Work</h2>
-            <div class="project-grid">
-                <div class="card project-card">
-                    <div class="tag">Engineering</div>
-                    <h3>Structural Analysis</h3>
-                    <p>Structural exercises using AutoCAD and BNBC 2020 protocols.</p>
-                </div>
-                <div class="card project-card">
-                    <div class="tag">Creative</div>
-                    <h3>Static Soul Media</h3>
-                    <p>Managing lyrical content production and social media engineering.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section class="contact">
+      <h2>Get In Touch</h2>
+      <button>Email Me</button>
+    </section>
+  </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Md. Adib Reza Nafi • Built with Precision</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

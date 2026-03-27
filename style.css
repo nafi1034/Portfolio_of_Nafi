@@ -3,7 +3,7 @@
   --header-bg: #f8fafc;
   --text-main: #0f172a;
   --text-muted: #64748b;
-  --accent: #2563eb;
+  --accent: #2563eb; /* Professional Engineering Blue */
   --card-bg: #ffffff;
   --border: #e2e8f0;
 }
@@ -24,7 +24,7 @@ body {
   font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: var(--bg);
   color: var(--text-main);
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
   line-height: 1.6;
 }
 
@@ -33,11 +33,10 @@ body {
 /* Navbar */
 .navbar {
   position: fixed; top: 0; width: 100%; z-index: 1000;
-  background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px);
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
   padding: 15px 0;
 }
-body.dark .navbar { background: rgba(15, 23, 42, 0.8); }
 
 .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 800px; margin: 0 auto; padding: 0 20px; }
 .logo { font-weight: 800; font-size: 1.2rem; }
@@ -45,11 +44,11 @@ body.dark .navbar { background: rgba(15, 23, 42, 0.8); }
 .nav-right { display: flex; align-items: center; gap: 20px; }
 .nav-right a { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.9rem; }
 
-.theme-switch { background: none; border: 1px solid var(--border); padding: 5px 8px; border-radius: 8px; cursor: pointer; }
+.theme-switch { background: none; border: 1px solid var(--border); padding: 5px 8px; border-radius: 8px; cursor: pointer; font-size: 1rem; }
 
 /* Hero */
 .hero { padding: 120px 0 60px; text-align: center; background: var(--header-bg); border-bottom: 1px solid var(--border); }
-.profile-img { width: 120px; height: 120px; border-radius: 24px; margin-bottom: 20px; border: 3px solid var(--accent); }
+.profile-img { width: 130px; height: 130px; border-radius: 30px; margin-bottom: 20px; border: 3px solid var(--accent); object-fit: cover; }
 .hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
 .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 20px; }
 
@@ -63,23 +62,23 @@ h2 { font-size: 1.5rem; margin-bottom: 25px; border-left: 4px solid var(--accent
 .card { background: var(--card-bg); border: 1px solid var(--border); padding: 25px; border-radius: 16px; }
 
 /* Timeline */
-.timeline { border-left: 2px solid var(--border); padding-left: 25px; }
+.timeline { border-left: 2px solid var(--border); padding-left: 25px; margin-left: 10px; }
 .timeline-item { position: relative; margin-bottom: 35px; }
 .timeline-item::before { content: ''; position: absolute; left: -32px; top: 6px; width: 12px; height: 12px; background: var(--accent); border-radius: 50%; }
 .time-meta { font-weight: 800; color: var(--accent); font-size: 0.8rem; margin-bottom: 5px; }
 
 /* Projects */
-.project-list { display: grid; grid-template-columns: 1fr; gap: 15px; }
-.project-card { background: var(--card-bg); border: 1px solid var(--border); padding: 20px; border-radius: 12px; transition: transform 0.2s; }
-.project-card:hover { transform: translateY(-3px); border-color: var(--accent); }
-.project-card h3 { margin-bottom: 5px; font-size: 1.1rem; }
-.project-card span { font-size: 0.9rem; color: var(--text-muted); }
+.project-list { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.project-card { background: var(--card-bg); border: 1px solid var(--border); padding: 25px; border-radius: 16px; }
+.project-card h3 { margin-bottom: 8px; font-size: 1.2rem; }
+.project-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-/* Contact */
-.contact-box { text-align: center; background: var(--accent); color: white; padding: 40px; border-radius: 20px; }
+/* Contact Box */
+.contact-box { text-align: center; background: var(--accent); color: white; padding: 50px; border-radius: 24px; }
 .contact-box h2 { border: none; padding: 0; margin-bottom: 10px; }
-.email-btn { display: inline-block; margin-top: 20px; background: white; color: var(--accent); padding: 12px 30px; border-radius: 10px; text-decoration: none; font-weight: 800; }
+.email-btn { display: inline-block; margin-top: 25px; background: white; color: var(--accent); padding: 12px 35px; border-radius: 12px; text-decoration: none; font-weight: 800; transition: transform 0.2s; }
+.email-btn:hover { transform: scale(1.05); }
 
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .project-list { grid-template-columns: 1fr 1fr; }
 }

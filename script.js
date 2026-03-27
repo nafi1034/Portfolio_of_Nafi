@@ -1,23 +1,18 @@
 const toggle = document.getElementById('darkModeToggle');
 const body = document.body;
 
-// Check for saved preference
-if (localStorage.getItem('theme') === 'dark') {
+// Check for saved theme
+if (localStorage.getItem('portfolio-theme') === 'dark') {
   body.classList.add('dark');
 }
 
 toggle.addEventListener('click', () => {
   body.classList.toggle('dark');
-  
-  // Save preference
-  if (body.classList.contains('dark')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
-    localStorage.setItem('theme', 'light');
-  }
+  const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
+  localStorage.setItem('portfolio-theme', currentTheme);
 });
 
-// Smooth reveal on scroll
+// Smooth reveal animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {

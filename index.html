@@ -4,64 +4,138 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adib Reza | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+
+  body{
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg,#020617,#0f172a);
+    color:#e2e8f0;
+  }
+
+  .header{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 40px;
+    position:sticky;
+    top:0;
+    background:rgba(2,6,23,0.8);
+    backdrop-filter:blur(10px);
+  }
+
+  nav a{
+    margin-left:15px;
+    color:#94a3b8;
+    text-decoration:none;
+  }
+
+  nav a:hover{color:#38bdf8}
+
+  .hero{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+  }
+
+  .hero h2{font-size:2.5rem}
+  .hero p{color:#94a3b8;margin-top:10px}
+
+  .section{
+    padding:80px 40px;
+    max-width:800px;
+    margin:auto;
+  }
+
+  .card{
+    background:#0f172a;
+    margin:15px 0;
+    padding:20px;
+    border-radius:10px;
+    border:1px solid #1e293b;
+    transition:.4s;
+  }
+
+  .card:hover{
+    transform:translateY(-5px);
+    border-color:#38bdf8;
+  }
+
+  footer{
+    text-align:center;
+    padding:30px;
+    color:#64748b;
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+  }
+
+  .reveal.active{
+    opacity:1;
+    transform:translateY(0);
+  }
+  </style>
+
 </head>
 <body>
-
-<canvas id="bg"></canvas>
 
 <header class="header">
   <h1>Adib Reza</h1>
   <nav>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
     <a href="#contact">Contact</a>
   </nav>
-  <button id="toggleTheme">🌙</button>
 </header>
 
-<section class="hero" id="about">
-  <img src="https://raw.githubusercontent.com/nafi1034/Portfolio_of_Nafi/main/profile.jpg" class="profile-img">
-  <h2><span id="typing"></span></h2>
+<section class="hero reveal" id="about">
+  <h2>Hi, I'm Adib 👋</h2>
   <p>Aspiring Computer Scientist & Civil Engineer</p>
-  <a href="#projects" class="btn">View Projects</a>
 </section>
 
-<section class="section">
+<section class="section reveal" id="education">
   <h2>Academic Journey</h2>
-  <div class="timeline">
-    <div class="card">2026 — Present | B.Sc. Computer Science</div>
-    <div class="card">2025 — Present | Civil Engineering</div>
-    <div class="card">HSC 2024 | Notre Dame College</div>
-    <div class="card">SSC 2022 | Rajshahi Collegiate School</div>
-  </div>
+
+  <div class="card">2026 — Present<br>B.Sc. Computer Science<br>University of the People</div>
+  <div class="card">2025 — Present<br>Civil Engineering<br>HSTU</div>
+  <div class="card">HSC 2024<br>Notre Dame College</div>
+  <div class="card">SSC 2022<br>Rajshahi Collegiate School</div>
+
 </section>
 
-<section class="section" id="skills">
-  <h2>Skills</h2>
-  <div class="skill"><span>HTML</span><div class="bar"><div style="width:85%"></div></div></div>
-  <div class="skill"><span>CSS</span><div class="bar"><div style="width:80%"></div></div></div>
-  <div class="skill"><span>JavaScript</span><div class="bar"><div style="width:70%"></div></div></div>
-</section>
-
-<section class="section" id="projects">
-  <h2>Projects</h2>
-  <div class="grid">
-    <div class="card">Portfolio Website 🚀</div>
-    <div class="card">More coming soon...</div>
-  </div>
-</section>
-
-<section class="section contact" id="contact">
+<section class="section reveal" id="contact">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:adibrezanafi@gmail.com">adibrezanafi@gmail.com</a></p>
+  <p>adibrezanafi@gmail.com</p>
 </section>
 
 <footer>
   <p>© 2026 Adib Reza</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+const reveals=document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+  const trigger=window.innerHeight*0.85;
+
+  reveals.forEach(el=>{
+    const top=el.getBoundingClientRect().top;
+    if(top<trigger){
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll',revealOnScroll);
+revealOnScroll();
+</script>
+
 </body>
 </html>

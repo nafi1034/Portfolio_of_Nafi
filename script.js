@@ -1,58 +1,37 @@
-/**
- * Portfolio Interactivity
- * Md. Adib Reza Nafi
- */
+<script>
+// DARK MODE + SAVE
+const btn=document.getElementById('toggleTheme');
+if(localStorage.getItem('theme')==='dark') document.body.classList.add('dark');
+btn.onclick=()=>{
+ document.body.classList.toggle('dark');
+ localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light');
+};
 
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Intersection Observer for Scroll Animations
-    // This looks for elements with the .reveal class and adds .active when they enter the viewport
-    const revealCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                // Once it's revealed, we don't need to track it anymore
-                observer.unobserve(entry.target);
-            }
-        });
-    };
+// TYPING EFFECT
+const text="Hi, I'm Adib 👋";
+let i=0;
+function type(){if(i<text.length){typing.innerHTML+=text[i++];setTimeout(type,70)}}
+type();
 
-    const revealObserver = new IntersectionObserver(revealCallback, {
-        threshold: 0.15 // Triggers when 15% of the element is visible
-    });
+// PARTICLES + CONNECT LINES (PRO)
+const canvas=document.getElementById('bg');
+const ctx=canvas.getContext('2d');
+canvas.width=innerWidth;canvas.height=innerHeight;
+let p=[];
+for(let i=0;i<100;i++)p.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,dx:Math.random()-0.5,dy:Math.random()-0.5});
 
-    document.querySelectorAll('.reveal').forEach(element => {
-        revealObserver.observe(element);
-    });
+function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);
+ p.forEach(a=>{
+  a.x+=a.dx;a.y+=a.dy;
+  ctx.beginPath();ctx.arc(a.x,a.y,2,0,Math.PI*2);ctx.fill();
+  p.forEach(b=>{
+    let d=Math.hypot(a.x-b.x,a.y-b.y);
+    if(d<100){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle='rgba(0,0,0,0.1)';ctx.stroke();}
+  });
+ });
+ requestAnimationFrame(draw);
+}
+draw();
 
-
-    // 2. Smooth Scrolling for Navigation
-    // Makes clicking "Education" or "Work" slide down smoothly instead of jumping
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 80, // Offset for the sticky navbar
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-
-    // 3. Navbar Background Blur on Scroll
-    // Adds a solid background to the navbar only after you start scrolling
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(10, 10, 12, 0.8)';
-            navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
-        } else {
-            navbar.style.background = 'transparent';
-            navbar.style.borderBottom = 'none';
-        }
-    });
-});
+onresize=()=>{canvas.width=innerWidth;canvas.height=innerHeight};
+</script>
